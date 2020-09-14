@@ -1,5 +1,7 @@
 package com.meihaofenqi.service;
 
+import com.meihaofenqi.base.ApiConfigKit;
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;

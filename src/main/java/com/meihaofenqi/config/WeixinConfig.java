@@ -6,7 +6,10 @@ import com.jfinal.config.Interceptors;
 import com.jfinal.config.JFinalConfig;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
+import com.jfinal.kit.PropKit;
 import com.jfinal.template.Engine;
+import com.meihaofenqi.base.ApiConfig;
+import com.meihaofenqi.base.ApiConfigKit;
 import com.meihaofenqi.service.SpringJFinalFilter;
 import com.meihaofenqi.web.WeixinMsgController;
 import lombok.extern.slf4j.Slf4j;
@@ -43,6 +46,7 @@ public class WeixinConfig extends JFinalConfig {
 
     @Override
     public void configPlugin(Plugins me) {
+        PropKit.use("wechat-local.txt");
     }
 
     @Override
@@ -61,6 +65,20 @@ public class WeixinConfig extends JFinalConfig {
 
     @Override
     public void onStart() {
+        ApiConfig ac = new ApiConfig();
+        // 配置微信 API 相关参数
+        ac.setToken(PropKit.get("token"));
+        ac.setAppId(PropKit.get("appId"));
+        ac.setAppSecret(PropKit.get("appSecret"));
+
+        /**
+         *  是否对消息进行加密，对应于微信平台的消息加解密方式：
+         *  1：true进行加密且必须配置 encodingAesKey
+         *  2：false采用明文模式，同时也支持混合模式
+         */
+        ac.setMessageEncrypt(PropKit.getBoolean("encryptMessage", false));
+        ac.setEncodingAesKey(PropKit.get("encodingAesKey", "setting it in config file"));
+        ApiConfigKit.putApiConfig(ac);
     }
 
     /**

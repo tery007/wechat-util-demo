@@ -26,7 +26,7 @@ public class WechatLoader {
 
     @PostConstruct
     public void load() {
-        loadWeixinSdk(wechatAppConfig);
+//        loadWeixinSdk(wechatAppConfig);
         cacheInit(jedisPool);
     }
 
