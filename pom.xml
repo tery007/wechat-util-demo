@@ -30,8 +30,9 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--将wehcat-util项目放到自己的mvn仓库再配置此依赖-->
         <dependency>
-            <groupId>com.meihaofenqi</groupId>
+            <groupId>com.tery.edu</groupId>
             <artifactId>wechat-util</artifactId>
             <version>1.0.1-SNAPSHOT</version>
         </dependency>
@@ -116,32 +117,5 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>Team Nexus Repository</name>
-            <url>http://nexus.meihaofenqi.net/nexus/content/groups/public</url>
-        </repository>
-        <repository>
-            <id>offical</id>
-            <name>Maven Official Repository</name>
-            <url>http://repo1.maven.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Local Nexus Repository</name>
-            <url>http://nexus.meihaofenqi.net/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>Local Nexus Repository</name>
-            <url>http://nexus.meihaofenqi.net/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
