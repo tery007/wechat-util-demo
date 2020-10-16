@@ -1,12 +1,12 @@
 # 微信服务器回调所用的 token
-token=QFrmM3uMyoKXTCGBnythHO
+token=xxx
 
 # 测试用的账号
-appId=wxbe822210e70823fd
-appSecret=e10501e01aef7c796380c024228877d5
+appId=xxx
+appSecret=xxx
 
 #是否对消息进行加密，是否对消息进行加密，对应于微信平台的消息加解密方式，false支持明文模式及兼容模式，true支持安全模式及兼容模式
 encryptMessage=true
-encodingAesKey=sGQHboXNestd8CC4ag5mmwK9wQxmfWgdGCKIlBsgMZ0
+encodingAesKey=xxx
 
 

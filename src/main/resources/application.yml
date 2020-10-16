@@ -25,19 +25,19 @@ logging:
     com.meihaofenqi: debug
   file: log/wechat-util-demo.log
 wechat:
-  appId: wxbe822210e70823fd
-  appSecret: e10501e01aef7c796380c024228877d5
-  token: QFrmM3uMyoKXTCGBnythHO
+  appId: xxx
+  appSecret: xxx
+  token: xxx
 
 ---
 spring:
   profiles: test
   redis:
     database: 1
-    host: 10.9.162.84
+    host: xxx
     port: 6380
     timeout: 600000
-    password: buPwscqs5nmtk,m2zihV
+    password: xxx
     jedis:
       pool:
         max-idle: 800
@@ -47,8 +47,8 @@ spring:
 logging:
   level:
     com.meihaofenqi: debug
-  file: /opt/meihaofenqi/wechat-util-demo.log
+  file: /opt/project/wechat-util-demo.log
 wechat:
-  appId: wxbe822210e70823fd
-  appSecret: e10501e01aef7c796380c024228877d5
-  token: QFrmM3uMyoKXTCGBnythHO
+  appId: xxx
+  appSecret: xxx
+  token: xxx

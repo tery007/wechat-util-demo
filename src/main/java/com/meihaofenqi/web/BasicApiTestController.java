@@ -50,11 +50,11 @@ public class BasicApiTestController {
         String openId = "oiQcv1MDML-CcghyxFu4Etc1JwLI";
         String text = "请您对本次服务进行评价，祝您生活愉快\n" +
                 "\n" +
-                "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd2ff381c818e334b&redirect_uri=http%3A%2F%2Fwechat.meihaofenqi.com%2Fh5%2Fsatis%3Fsi%3D2008150020%26sf%3D1&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'>【非常满意】</a>\n" +
+                "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=xxx&redirect_uri=http%3A%2F%2Fxxx%2Fh5%2Fsatis%3Fsi%3D2008150020%26sf%3D1&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'>【非常满意】</a>\n" +
                 "\n" +
-                "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd2ff381c818e334b&redirect_uri=http%3A%2F%2Fwechat.meihaofenqi.com%2Fh5%2Fsatis%3Fsi%3D2008150020%26sf%3D2&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'>【满意】</a>\n" +
+                "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=xxx&redirect_uri=http%3A%2F%2Fxxx%2Fh5%2Fsatis%3Fsi%3D2008150020%26sf%3D2&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'>【满意】</a>\n" +
                 "\n" +
-                "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd2ff381c818e334b&redirect_uri=http%3A%2F%2Fwechat.meihaofenqi.com%2Fh5%2Fsatis%3Fsi%3D2008150020%26sf%3D3&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'>【不满意】</a>\n";
+                "<a href='https://open.weixin.qq.com/connect/oauth2/authorize?appid=xxx&redirect_uri=http%3A%2F%2Fxxx%2Fh5%2Fsatis%3Fsi%3D2008150020%26sf%3D3&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'>【不满意】</a>\n";
         // 测试发送纯文本消息
         ApiResult result = KefuMsgApi.newInstance(ApiConfigKit.getApiConfig(null)).sendText(openId, text);
         return result.getJson();
