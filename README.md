@@ -14,8 +14,9 @@ SpringJFinalFilter
 ```
 #### 3、依赖配置
 ```
+<!--将wehcat-util项目放到自己的mvn仓库再配置此依赖-->
 <dependency>
-    <groupId>com.meihaofenqi</groupId>
+    <groupId>om.tery.edu</groupId>
     <artifactId>wechat-util</artifactId>
     <version>1.0.1-SNAPSHOT</version>
 </dependency>
